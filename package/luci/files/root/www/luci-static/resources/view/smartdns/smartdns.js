@@ -179,6 +179,14 @@ return L.view.extend({
 		o.rmempty = false;
 		o.default = o.enabled;
 
+		// dns server group;
+		o = s.taboption("settings", form.Value, "server_group", _("Server Group"),
+			_("Query DNS through specific dns server group, such as office, home."));
+		o.rmempty = true;
+		o.placeholder = "default";
+		o.datatype = "hostname";
+		o.rempty = true;
+
 		// Support IPV6;
 		o = s.taboption("settings", form.Flag, "ipv6_server", _("IPV6 Server"), _("Enable IPV6 DNS Server"));
 		o.rmempty = false;
